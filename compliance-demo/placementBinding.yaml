@@ -9,4 +9,4 @@ subjects:
 - name: compliance1
   kind: Compliance
 - name: deployable-simple
-  kind: DestinationPolicy
+  kind: Deploayable
