@@ -1,12 +1,14 @@
 apiVersion: mcm.ibm.com/v1alpha1
-kind: PlacementBinding
+kind: PlacementPolicy
 metadata:
-  name: binding1
-  namespace: mcm
-placementRef:
   name: placement1
-subjects:
-- name: compliance1
-  kind: Compliance
-- name: deployable-simple
-  kind: DestinationPolicy
+  namespace: mcm
+spec:
+  clusterNames:
+  - "icp3"
+#  clusterLabels:
+#    matchLabels:
+#      cloud: "IBM"
+#  clusterConditions:
+#  - type: "OK"
+#    status: "True"
